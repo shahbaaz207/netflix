@@ -1,0 +1,495 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #e50914;
+  --secondary-color:#141414
+}
+body {
+  font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background: #000;
+  color: #999;
+}
+
+ul {
+  list-style: none;
+}
+h1,
+h4,
+h3,
+h2 {
+  color: #ffff;
+}
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+p{
+    margin: 0.5rem 0;
+}
+img{
+    width: 100%;
+}
+.showcase{
+    width:100%;
+    height: 93vh;
+    position: relative;
+    background: url("https://i.ibb.co/vXqDmnh/background.jpg");
+}
+
+.showcase::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0,0,0,0.6);
+    box-shadow: inset 120px 100px 250px #000000,inset -120px -100px -250px #000000;
+}
+
+.showcase-top{
+    position: relative;
+    height: 90px;
+    z-index: 100;
+}
+.showcase-top img{
+    width: 150px;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    transform: translate(-50%);
+}
+
+.showcase-top a{
+    position: absolute;
+    top: 30%;
+    right:0;
+    transform: translate(-50%,-50%);
+    
+}
+
+.showcase-content{
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 2rem;
+    z-index: 3;
+}
+.showcase-content b{
+    margin-top: 1rem;
+    padding: 1rem;
+}
+.showcase-content input{
+    width: 60%;
+    height: 50px;
+}
+
+.showcase-content h1{
+    font-weight: 700;
+    font-size: 3.2rem;
+    line-height: 1.1;
+    margin: 0 0 2rem;
+}
+.showcase-content p{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #fff;
+    line-height: 1.25;
+    margin: 0 0 2rem;
+}
+
+/* Tabs */
+
+.tabs{
+    background: #262626;
+    padding: 1rem;
+    background-origin: 3px solid #3d3d3d;
+}
+.tabs .container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    grid-gap: 1rem;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.tabs .container>div{
+    padding: 1rem 0;
+}
+.tabs .container>div:hover{
+    color: #fff;
+    cursor: pointer;
+}
+.tab-border{
+    border-bottom: var(--primary-color) 2px solid;
+}
+
+#tab-1-content,
+#tab-2-content,
+#tab-3-content {
+	display: none;
+	opacity: 0;
+}
+
+.show {
+	display: block !important;
+	opacity: 1 !important;
+	transition: all 1000 ease-in;
+}
+
+/* tab content */
+.tab-content{
+    padding: 3rem 0;
+    background: #000;
+    color: #fff;
+}
+
+.container p{
+    font-size: 1.2rem;
+    padding: 0.5rem;
+}
+
+#tab-1-content .tab-1-content-inner{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-content: center;
+    grid-gap: 1rem;
+    text-align: center;
+}
+
+
+#tab-2-content .tab-2-content-top{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#tab-2-content .tab-2-content-bottom{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.table{
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.table thead th{
+    text-transform: uppercase;
+    padding: 0.8rem;
+}
+
+.table tbody tr td{
+    color: #999;
+    padding: 0.8rem 1.2rem;
+    text-align: center;
+}
+.table tbody tr td:first-child{
+    text-align: start;
+}
+
+.table tbody tr:nth-child(odd){
+    background: #222;
+}
+
+/* footer */
+.footer{
+    max-width: 75%;
+    margin: 1rem auto;
+    overflow: auto;
+    border-top: #404040 solid 1px;
+}
+.footer, footer a{
+    color: #999;
+    font-size: .9rem;
+}
+.footer p{
+    margin-bottom: 1.5rem;
+}
+.footer .footer-cols{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    justify-content: center;
+    grid-gap: 1rem;
+    margin: 0 auto  ;
+}
+.footer li{
+    line-height: 1.9rem;
+}
+
+/* Container */
+.container{
+    max-width: 70%;
+    margin: auto;
+    overflow: hidden;
+    padding:0 2rem;
+}
+
+/* Text style */
+.text-xl{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+
+}
+.text-lg{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+.text.center{
+    text-align: center;
+}
+
+.text-dark{
+    color: #999;
+}
+.text-md{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Button */
+.btn{
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: .4rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0,0,0,.045);
+    border-radius: 2px;
+
+}
+
+.btn:hover{
+    opacity: 0.9;
+}
+.btn-rounded{
+    border-bottom: 5px;
+    z-index: 3;
+}
+.btn-xl{
+    font-size: 1.1rem;
+    padding: 1.3rem 2.1rem;
+    text-transform: uppercase;
+}
+.btn-lg{
+    font-size: 1rem;
+    padding: 1rem 1rem;
+    text-transform: uppercase;
+}
+
+.section-a{
+    width: 80%;
+    margin: 2.5rem auto;
+    border-bottom: grey 1px solid;
+    border-top: grey 1px solid;
+
+}
+.section-a .container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-align: center;
+    grid-gap: 3rem;
+    border-bottom: grey 1px solid;
+    margin-top: 2rem;
+}
+.section-a .container h1{
+    font-size: 2rem;
+}
+
+/* section-b */
+.section-b{
+    margin: 2rem auto;
+    width: 70%;
+    height: 100%;
+    border-top: #808080 2px solid;
+
+}
+.section-b h1{
+    text-align: center;
+    margin-top: 1rem;
+}
+.section-b h3{
+    font-size: .7rem;
+}
+.section-b i{
+    font-size: 2rem;
+}
+.section-b .question{
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    grid-gap: .2rem;
+    background: #808080;
+}
+
+
+@media (max-width:960px){
+    .showcase{
+        height:70vh;
+    }
+    .hide-sm{
+        display: none;
+    }
+
+    .showcase-top img{
+        transform: translate(0);
+    }
+
+    .showcase-content h1{
+        font-size: 3.7rem;
+        line-height: 1;
+    }
+    .showcase-content p{
+        font-size: 1.5rem;
+    }
+
+    .footer.footer-cols{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .btn-xl{
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    .text-xl{
+        font-size: 1rem;
+    }
+    .text-xl{
+        font-size: 1rem;
+    }
+    .text-lg{
+        font-size: .9rem;
+    }
+    .text-md{
+        font-size: .6rem;
+    }
+
+    .section-a .container{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        text-align: center;
+        grid-gap: 3rem;
+        margin-top: 3rem;
+    }
+
+    .showcase-content b{
+        margin-top: .7rem;
+        padding: .7rem;
+    }
+    .showcase-content input{
+        width: 50%;
+        height: 30px;
+    }
+    
+
+    
+}
+
+@media (max-width:700px){
+    #tab-1-content .tab-1-content-inner{
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    #tab-2-content .tab-2-content-top{
+        display: block;
+        text-align: center;
+
+    }
+
+    #tab-2-content .tab-2-content-bottom{
+        grid-template-columns: 1fr; 
+    }
+
+    .showcase-content h1{
+        font-size: 2.7rem;
+        line-height: .8;
+    }
+    .showcase-content p{
+        font-size: 1rem;
+    }
+
+    .footer.footer-cols{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .btn-xl{
+        font-size: .8rem;
+        padding: .7rem;
+    }
+    .text-xl{
+        font-size: .4rem;
+    }
+    .text-xl{
+        font-size: .4rem;
+    }
+    .text-lg{
+        font-size: .4rem;
+    }
+    .text-md{
+        font-size: .3rem;
+    }
+
+    .table thead th{
+        text-transform: uppercase;
+        padding: 0.5rem;
+    }
+    
+    .table tbody tr td{
+        color: #999;
+        padding: 0.8rem 1.2rem;
+        text-align: center;
+    }
+    .table tbody tr td:first-child{
+        text-align: start;
+    }
+    
+    .table tbody tr:nth-child(odd){
+        background: #222;
+    }
+    .showcase-content b{
+        margin-top: .5rem;
+        padding: .5rem;
+    }
+    .showcase-content input{
+        width: 60%;
+        height: 30px;
+    }
+       
+}
